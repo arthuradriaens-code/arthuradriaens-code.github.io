@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- volgende 2 lijnen zijn mathjax implementatie -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Building a solar system in Unity</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<header class="header">
+	<div class="container">
+      	<div class="image">
+			<img src="images/orbital.png" alt="drawing of spacetime" width="150">
+      	</div>
+      	<div class="text">
+			<h1>Building a solar system in Unity</h1>
+		</div>
+    </div>
+</header>
+<body class=body>
+	<h2>Building planets</h2>
+	<p>
+	<div class="container">
+		<div class="text">
+		We'll first start out by actually building planets, the plan is to be able to create a sphere and (ideally) map a real world photo of the planet on the sphere. 
+		To have good control over the amount of gridlines on the sphere we won't use a conventional sphere as shown to the right of this text as it has more detail 
+		towards the poles than in the middle. To get a sphere with equally spaced gridlines we'll inflate a cube as shown below. 
+		</div>
+		<div class="image">
+		<img src="images/1920px-Sphere_wireframe_10deg_6r.svg.png" alt="drawing of spacetime" width="150">
+		</div>
+	</div>
+	<div class="container">
+	<div class="image">
+		<img src="images/cubesphere.png" alt="drawing of spacetime" width="300">
+	</div>
+	</div>
+	<h3>Scripts</h3>
+	</p>
+	<p>
+	Now that we know what to do, we'll start actually doing. First we'll create 2 C# scripts in unity: 
+	<ul><li>Planet.cs</li></ul>
+	<ul><li>TerrainFace.cs</li></ul>
+	The idea is that the planet script will be responsible for creating 6 terrain faces (cube) telling each of them which direction they're facing 
+	and each terrainface will then construct their own mesh. We'll start by writing TerrainFace.cs, in the end it'll look 
+	like <a href="https://github.com/SebLague/Procedural-Planets/blob/master/Procedural%20Planet%20E01/Assets/TerrainFace.cs">this</a>
+	but that's really intimidating so download the file and we'll go over the lines step by step.
+
+</p>
+
+<div class="buttons">
+	<a href="../blogs.html"><img src="images/back.png" alt="back button" width="20"></a>
+	<a href="../../index.html"><img src="images/home.png" alt="home button" width="20" class="home"></a>
+</div>
+</body>

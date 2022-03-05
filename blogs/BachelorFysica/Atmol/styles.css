@@ -21,7 +21,12 @@
      margin-bottom: 2cm;
   }
 .buttons {
+	   display:flex;
 	   align-items: center;
 	   justify-content:center;
-	   margin-top: 5cm;
-	 }
+	   position: relative;
+	   bottom:0;
+         }
+	.home {
+        padding-left: 5px;
+         }

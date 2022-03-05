@@ -1,0 +1,381 @@
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float,flafter}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{pgfplotstable,filecontents}
+\usepackage{tikz-feynman}
+\setlength\paperwidth{20.999cm}\setlength\paperheight{29.699cm}\setlength\voffset{-1in}\setlength\hoffset{-1in}\setlength\topmargin{1.499cm}\setlength\headheight{12pt}\setlength\headsep{0cm}\setlength\footskip{1.131cm}\setlength\textheight{25cm}\setlength\oddsidemargin{2.499cm}\setlength\textwidth{15.999cm}
+\newcommand{\apj}{The Astrophysical Journal}
+\setcounter{section}{7}
+\begin{document}
+	\begin{center}
+		\hrule
+		\vspace{.4cm}
+		{\bf {\huge Subatomic Physics II: Problem set 7}}
+		\vspace{.2cm}
+		\\
+		{\bf Arthur Adriaens}
+		\vspace{.2cm}
+		\hrule
+	\end{center}
+\subsection{Feynman rules}
+\subsubsection{$Ze\mu$}
+We can say that this is not possible as lepton flavour violation would occur.
+\subsubsection{$Wtb$}
+This is a possible vertex with the following examples for feynmann diagrams:
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.49\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{feynman}
+    \vertex (a1) {\(t\)};
+    \vertex[right=1.5cm of a1] (a2);
+    \vertex[right=1cm of a2] (a3);
+    \vertex[above=1cm of a3] (b1);
+    \vertex[right=1cm of b1] (f3);
+    \vertex[above=1cm of f3] (f1) {\(e^+\)};
+    \vertex[below=1cm of f3] (f2) {\(\nu_e\)};
+    \vertex[below=1cm of a3] (b2) {\(b\)};
+    \diagram* {
+      {[edges=fermion]
+        (a1) -- (a2) -- (b2)
+      },
+  	{[edges=fermion]
+  		(f1) -- (b1) -- (f2)
+  	},
+      (a2) -- [boson,edge label=\(W^+\)] (b1),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\caption{single particle decay}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{feynman}
+    \vertex (a0);
+    \vertex[above=1cm of a0] (a1) {\(W^+\)};
+    \vertex[below=1cm of a0] (a2) {\(b\)};
+    \vertex[right=2cm of a0] (b1);
+    \vertex[right=2cm of b1] (b2) {\(t\)};
+    \diagram* {
+      {[edges=fermion]
+        (a2) -- (b1) -- (b2)
+      },
+      (a1) -- [boson] (b1),
+    };
+\end{feynman}
+\end{tikzpicture}
+\caption{collision}
+\end{subfigure}
+\end{figure}
+\\
+\textbf{Single particle decay}
+\\
+Here we have (COM frame):
+\begin{align}
+s &= (P_{W^+}^\mu + P_b^\mu)^2g_{\mu\nu}\\
+s &= m_{W^+}^2 + m_b^2 + 2(E_{W^+}E_b - p_{W^+}\cos(\theta)p_b\cos(\theta') + p_{W^+}\sin(\theta)p_b\sin(\theta'))\\
+s &\geq  m_{W^+}^2 + m_b^2 + 2(E_{W^+}E_{b})|_{\vec{p}_{w,b}=0} = m_{W^+}^2 + m_b^2 + 2(m_{W^+}m_{b})\\
+\sqrt{s} &\geq 84.56 \text{GeV}\\
+\end{align}
+Where $m_b = 4.18 GeV$ and $m_{W^+} = 80.379GeV$\footnote{All the masses used in this work are obtained from the PDG\cite{PDG}}, now as $m_t = 172.76 GeV$ we see that we definitely have the required center of mass energy, even if the $W^+$ boson were on-shell (which it doesn't have to be).
+\\\\
+\textbf{Collision}
+\\
+Here we have the following four-vectors (COM frame):
+\begin{align}
+	P^\mu_{W^+} &= (E_{W^+},0,-p,0)\\
+	P^\mu_b &= (E_b,0,p,0)
+\end{align}
+Doing analogues calculations as the previous one:
+\begin{align}
+	s &= (P_{W^+}^\mu + P_b^\mu)^2g_{\mu\nu}\\
+	s &= m_{W^+}^2 + m_b^2 + 2(E_{W^+}E_{b} + p^2)\\
+	s &=  m_{W^+}^2 + m_b^2 + 2\left(\sqrt{m_{W^+}^2+p^2}\sqrt{m_{b}^2+p^2} + p^2\right)\\
+\end{align}
+Now as $m_\tau^2 \leq s$ we have that $p \geq 67.6$ GeV for the t-quark to be on shell, in which $W^+$ has to be on-shell.
+\newpage
+\subsubsection{$H\gamma\gamma$}
+Although this is in principle 'possible' as "the Higgs boson can decay to all Standard Model particles"\cite{Thomson}, the coupling strenght of the higgs boson is proportional to the mass of the particles involved and thus this will tend to zero for the photon.
+\subsubsection{$\gamma\tau\tau$}
+The decay isn't possible for on-shell particles as we could always Lorentzboost to a frame of reference where 3-momentum $\textbf{p}$ isn't conserved (e.g the $\tau$ particles' COM frame). It is however possible for the photon to decay into 2 off-shell $\tau$ leptons (denoted $\tau^*$ and $\bar{\tau}^*$) as then we can momentarily violate 3-momentum conservation:
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a1) {\(\gamma\)};
+		\vertex[right=2cm of a1] (a2);
+		\vertex[right=2cm of a2] (a3);
+		\vertex[above=1cm of a3] (b1) {\(\tau^*\)};
+		\vertex[right=1cm of b1] (fm1);
+		\vertex[above=0.5cm of fm1] (f1) {\(\gamma\)};
+		\vertex[below=0.5cm of fm1] (f2) {\(\nu_\tau\)};
+		\vertex[below=1cm of a3] (b2) {\(\bar{\tau}^*\)};
+		\vertex[right=1cm of b2] (fm2);
+		\vertex[above=0.5cm of fm2] (f3) {\(\gamma\)};
+		\vertex[below=0.5cm of fm2] (f4) {\(\bar{\nu}_\tau\)};
+		\diagram* {
+			{[edges=fermion]
+				(b2) -- (a2) -- (b1)
+			},
+			(f1) --[boson] (b1) --[fermion] (f2),
+			(f4) --[fermion] (b2) --[boson] (f3),
+			(a1) -- [boson] (a2),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{single particle decay}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a0);
+		\vertex[above=1cm of a0] (a1) {\(\tau\)};
+		\vertex[below=1cm of a0] (a2) {\(\bar{\tau}\)};
+		\vertex[right=2cm of a0] (b1);
+		\vertex[right=2cm of b1] (b2);
+		\vertex[right=2cm of b2] (fm1);
+		\vertex[above=1cm of fm1] (f1) {\(e^+\)};
+		\vertex[below=1cm of fm1] (f2) {\(e^-\)};
+		\diagram* {
+			{[edges=fermion]
+				(a1) -- (b1) -- (a2)
+			},
+			{[edges=fermion]
+				(f1) -- (b2) -- (f2)
+			},
+			(b1) -- [boson,edge label=\(\gamma^*\)] (b2),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{collision}
+	\end{subfigure}
+\end{figure}\\
+And, as seen from the figure, it's also possible for 2 on-shell tau leptons to decay into a virtual photon which decays into an electron-positron pair, as $m_{\tau} \gg m_e$ there's no need to concern ourselves with the COM calculations.
+\subsubsection{$HWW$}
+This is a possible vertex with the following examples:
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a1) {\(H\)};
+		\vertex[right=2cm of a1] (a2);
+		\vertex[right=2cm of a2] (a3);
+		\vertex[above=1cm of a3] (b1) {\(W^+\)};
+		\vertex[right=1cm of b1] (fm1);
+		\vertex[above=0.5cm of fm1] (f1) {\(e^+\)};
+		\vertex[below=0.5cm of fm1] (f2) {\(\nu_e\)};
+		\vertex[below=1cm of a3] (b2) {\(W^-\)};
+		\vertex[right=1cm of b2] (fm2);
+		\vertex[above=0.5cm of fm2] (f3) {\(e^-\)};
+		\vertex[below=0.5cm of fm2] (f4) {\(\bar{\nu}_e\)};
+		\diagram* {
+			{[edges=boson]
+				(b1) -- (a2) -- (b2)
+			},
+		{[edges=fermion]
+			(f1) -- (b1) -- (f2)
+		},
+		{[edges=fermion]
+			(f4) -- (b2) -- (f3)
+		},
+			(a1) -- [scalar] (a2),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{single particle decay}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a0);
+		\vertex[above=1cm of a0] (a1) {\(W+\)};
+		\vertex[below=1cm of a0] (a2) {\(W^-\)};
+		\vertex[right=2cm of a0] (b1);
+		\vertex[right=2cm of b1] (b2);
+		\vertex[right=2cm of b2] (fm);
+		\vertex[above=1cm of fm] (f1) {\(e^+\)};
+		\vertex[below=1cm of fm] (f2) {\(e^-\)};
+		\diagram* {
+			(b1) -- [scalar, edge label=H] (b2),
+			(a1) -- [boson] (b1) -- [boson] (a2),
+			(f1) -- [fermion] (b2) -- [fermion] (f2),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{collision}
+	\end{subfigure}
+\end{figure}
+\\\\
+\textbf{Single particle decay}
+\\
+This is possible but as $m_H < 2m_W$ (125.25GeV$<$160.758GeV) One of the $W$ bosons produced is off-shell.\\\\
+\textbf{Collision}\\
+As $m_H < 2m_W$ at least one of the $W$ bosons has to be virtual, we can understand this by looking at the COM frame. before the interaction we have:
+\begin{align}
+	s &= (P^{\mu}_{W^+} + P^{\mu}_{W^-})^2g_{\mu\nu}\\
+	s &= m_{W^+}^2 + m_{W^-}^2 + 2(E_{W^+}E_{W^-} + pp)\\
+	s_{\text{min}} &\stackrel{p\rightarrow 0}{=} m_{W^+}^2 + m_{W^-}^2 + 2m_{W^+}m_{W^-}\\
+\end{align}
+Which implies a minimal COM energy way bigger than 125.25GeV if both bosons are on-shell.
+\subsubsection{$Z\nu_e\nu_e$}
+This is a possible vertex with example diagrams:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex[right=2cm of a0] (a1);
+		\vertex[right=2cm of a1] (a2);
+		\vertex[right=2cm of a2] (a3);
+		\vertex[above=1cm of a3] (b1) {\(\nu_e\)};
+		\vertex[below=1cm of a3] (b2) {\(\bar{\nu}_e\)};
+		\diagram* {
+				(a1) -- [boson, edge label = \(Z\)](a2),
+			(b2) -- [fermion] (a2) -- [fermion] (b1),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{single particle decay}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a0);
+		\vertex[above=1cm of a0] (a1) {\(\nu_e\)};
+		\vertex[below=1cm of a0] (a2) {\(\bar{\nu}_e\)};
+		\vertex[right=2cm of a0] (b1);
+		\vertex[right=2cm of b1] (b2);
+		\vertex[right = 2cm of b2] (fm);
+		\vertex[above = 1cm of fm] (f1) {\(e^+\)};
+		\vertex[below = 1cm of fm] (f2) {\(e^-\)};
+		\diagram* {
+				(b1) -- [boson, edge label = \(Z\)](b2),
+			{[edges=fermion]
+				(f1) -- (b2) -- (f2)
+			},
+			(a1) -- [fermion] (b1) -- [fermion] (a2),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{collision}
+	\end{subfigure}
+\end{figure}
+\noindent
+\textbf{Single particle decay}\\
+As we're working with the tree-level Feynman rules of the Standard Model, we assume the neutrino to be massless (not that this matters much as $m_{\nu_e}<1.1$eV). In the COM frame we thus have:
+\begin{align}
+	m_Z^2 = s &= (P^\mu_{\nu_e} + P^\mu_{\bar{\nu}_e})^2g_{\mu\nu}\\
+	&= 2E^2
+\end{align}
+I.e the neutrinos have energies of $\frac{1}{\sqrt{2}}m_Z =\frac{1}{\sqrt{2}}91.1876$GeV $=64.48$GeV.
+\\\\
+\textbf{Collision}\\
+If the neutrinos in this interaction have energies of 64.48GeV, then this is a possible on-shell Z-boson production mechanism. It's also possible to produce off-shell Z-bosons with less energetic neutrinos. 
+\subsubsection{$gggg$}
+This is a possible vertex with the following feynmann diagrams:
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a0);
+		\vertex[above=1cm of a0] (i1) {\(u\)};
+		\vertex[below=1cm of a0] (i2) {\(\bar{u}\)};
+		\vertex[right=1cm of a0] (a1) {\(g\)};
+		\vertex[right=1cm of a1] (a2);
+		\vertex[right=1cm of a2] (b2) {\(g\)};
+		\vertex[right=1cm of b2] (fm2);
+		\vertex[above=0.1cm of fm2] (f3) {\(d\)};
+		\vertex[below=0.1cm of fm2] (f4) {\(\bar{d}\)};
+		\vertex[above=1.5cm of b2] (b1) {\(g\)};
+		\vertex[right=1cm of b1] (fm1);
+		\vertex[above=0.1cm of fm1] (f1) {\(u\)};
+		\vertex[below=0.1cm of fm1] (f2) {\(\bar{u}\)};
+		\vertex[below=1.5cm of b2] (b3) {\(g\)};
+		\vertex[right=1cm of b3] (fm3);
+		\vertex[above=0.1cm of fm3] (f5) {\(u\)};
+		\vertex[below=0.1cm of fm3] (f6) {\(\bar{u}\)};
+		\diagram* {
+			(a1) -- [gluon] (a2) -- [gluon] (b2),
+			(a2) -- [gluon] (b1),
+			(a2) -- [gluon] (b3),
+			(f2) -- [fermion] (b1) -- [fermion] (f1),
+			(f4) -- [fermion] (b2) -- [fermion] (f3),
+			(f6) -- [fermion] (b3) -- [fermion] (f5),
+			(i1) -- [fermion] (a1) -- [fermion] (i2),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{Particle decay}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\begin{feynman}
+		\vertex (a0);
+		
+		\vertex[above=1cm of a0] (a1) {\(g\)};
+		\vertex[left=1cm of a1] (im1);
+		\vertex[above=0.5cm of im1] (i1) {\(u\)};
+		\vertex[below=0.5cm of im1] (i2) {\(\bar{u}\)};
+		\vertex[below=1cm of a0] (a2) {\(g\)};
+		\vertex[left=1cm of a2] (im2);
+		\vertex[above=0.5cm of im2] (i3) {\(u\)};
+		\vertex[below=0.5cm of im2] (i4) {\(\bar{u}\)};
+		\vertex[right=1.5cm of a0] (center);
+		\vertex[right=3cm of a1] (b1) {\(g\)};
+		\vertex[right=1cm of b1] (fm1);
+		\vertex[above=0.1cm of fm1] (f1) {\(u\)};
+		\vertex[below=0.1cm of fm1] (f2) {\(\bar{u}\)};
+		\vertex[right=3cm of a2] (b2) {\(g\)};
+		\vertex[right=1cm of b2] (fm2);
+		\vertex[above=0.1cm of fm2] (f3) {\(u\)};
+		\vertex[below=0.1cm of fm2] (f4) {\(\bar{u}\)};
+		\diagram* {
+			{[edges=gluon]
+				(a1) -- (center) -- (b2)
+			},
+			(a2) -- [gluon] (center) -- [gluon] (b1),
+			(f2) -- [fermion] (b1) -- [fermion] (f1),
+			(f4) -- [fermion] (b2) -- [fermion] (f3),
+			(i1) -- [fermion] (a1) -- [fermion] (i2),
+			(i3) -- [fermion] (a2) -- [fermion] (i4),
+		};
+		\end{feynman}
+		\end{tikzpicture}
+		\caption{gg $\rightarrow$ gg}
+	\end{subfigure}
+\end{figure}\\
+As all the gluons are off-shell (due to the specific nature of gluons and color confinement), the kinematic condition is reduced to if there's enough COM energy to produce the observed pions:
+\\\\
+\textbf{Decay}\\
+Here we have that the end COM energy $\sqrt{s}\geq 3\times m_{\pi^0} = 404.91$ MeV, the com energy on the left is:
+\begin{equation}
+	\sqrt{s} = \sqrt{2m_u^2 + 2P_uP_{u'}} = \sqrt{2m_u^2 + 2m_u^2 + |\boldsymbol{p}|^2} \approx |\boldsymbol{p}|
+\end{equation}
+And thus $|\boldsymbol{p}| \geq 405$ MeV. 
+\\
+\textbf{Collision}
+\\In the collision, the incoming and outgoing particles are the same and so because of conservation of energy there are no kinematic terms that need to be computed.
+\bibliography{sources}
+\bibliographystyle{plain}
+\end{document}

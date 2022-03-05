@@ -1,0 +1,69 @@
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{float,flafter}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{pgfplotstable,filecontents}
+\setlength\paperwidth{20.999cm}\setlength\paperheight{29.699cm}\setlength\voffset{-1in}\setlength\hoffset{-1in}\setlength\topmargin{1.499cm}\setlength\headheight{12pt}\setlength\headsep{0cm}\setlength\footskip{1.131cm}\setlength\textheight{25cm}\setlength\oddsidemargin{2.499cm}\setlength\textwidth{15.999cm}
+\newcommand{\apj}{The Astrophysical Journal}
+\begin{document}
+	\begin{center}
+		\hrule
+		\vspace{.4cm}
+		{\bf {\huge Subatomic Physics II: Problem set 1}}
+		\vspace{.2cm}
+		\\
+		{\bf Arthur Adriaens}
+		\vspace{.2cm}
+		\hrule
+	\end{center}
+
+\section{Units}
+\subsection{lenght, cross section, time and decay rate}
+As $\left[c\right] = 1 = \frac{\left[L\right]}{\left[T\right]}$ with L denoting distance, T denoting time and $\left[x\right]$ denoting the unit of x, time and distance should have the same unit. Now looking at $\hbar$ we find that, as it can be expressed in MeV$\cdot$s, $\left[\hbar\right] = 1 = \left[E\right]\cdot\left[T\right]$ and thus $\left[T\right] = \left[E\right]^{-1}$.  
+We conclude that:
+\begin{itemize}
+	\item time as well as lenght are expressed in units of inverse energy
+\end{itemize}
+Now we have 2 more quantities left, cross section and decay rates. Cross section is usually measured in barn where $1b = 10^{-28}m^2$, i.e $\left[\sigma\right] = \left[L\right]^2$ so in natural units this goes as the inverse square of energy:
+\begin{itemize}
+	\item cross section is measured as the inverse square of energy
+\end{itemize}
+And lastly, decay rates are often measured in becquerel with $\left[Bq\right] = \left[T\right]^{-1}$ and thus:
+\begin{itemize}
+	\item decay rates are measured in units of energy
+\end{itemize}
+\subsection{$\mu_0$ and e}
+following maxwells equations we know that $c = \frac{1}{\sqrt{\epsilon_0\mu_0}}$ and thus:
+\begin{eqnarray}
+	c^2 &=& \frac{1}{\epsilon_0\mu_0}\\
+	c^2\epsilon_0 &=& \frac{1}{\mu_0}\\
+	1 &=& \frac{1}{\mu_0}\\
+	\mu_0 &=& 1\\
+\end{eqnarray}
+Now to get the charge of the electron we can look at the fine-structure constant $\alpha = \frac{e^2}{4\pi\epsilon_0\hbar c} \Rightarrow e = \sqrt{4\pi\alpha\epsilon_0\hbar c} \approx 0.3028$ (it is dimensionless).
+\subsection{"natural" scale for objects}
+If we use 1 GeV as the unit of energy, the unit of time and lenght becomes GeV$^{-1}$. We can convert length from GeV to fm by multiplying with $\hbar c = 0.197$GeV$\cdot$fm this gives 0.197fm for a proton in rest with energy $E \approx $1GeV. This is the same order of magnitude as the root mean square charge radius of a proton (0.84-0.87 fm), it is also the reduced compton wavelength of the proton. We thus can conclude that the length scale we find for a given energy reflects the scales at which interactions take place. For the time we find that T = 1 GeV$^{-1}$ corresponds to $6.57\times10^{-25}$ seconds (length/c) which is the time it takes light to travel that distance. 
+\section{Relativity}
+A K$^+$-meson is moving at a speed of 0.95c, this corresponds to a gamma factor $\gamma \approx 3.203$. Because of this the lifetime as observed from earth is $3.203\times12.38$ps$ = 39.65$ps. As it travels at 0.95c as observed from earth, it will cover a distance of $0.95c\times 39.65$ps$ = 0.011$m. The earthly observer will measure a momentum (natural units) $p_x = \gamma m \frac{v}{c} \approx 3.203\times0.95\times m_{K^+}$ = 1.502 GeV. and as $m^2 = p^\mu p_\mu = E^2 - \boldsymbol{p}^2$ we have that $E = \sqrt{m^2 + p_x^2} = 1.581$GeV.
+summary:
+\begin{itemize}
+	\item the lifetime of the kaon as observed on earth is 39.65ps (1.66$\times10^{-14}$GeV)
+	\item the meson travels an average distance of 1.1 cm
+	\item the meson has a momentum of 1.502 GeV and an energy of 1.581 GeV
+\end{itemize}
+\section{Particle Data Group}
+\begin{itemize}
+	\item the branching ratio of $\tau^- \rightarrow \pi^-\nu_\tau$ is 10.82$\pm$0.05 \%
+	\item A ground state usb baryon ($\Xi^0_b$) has an average mean life of 1.480$\pm$0.030$\times10^{-12}$s according to the Particle Data Group. And R. Aaji et al. (LHCb collaboration) have found 1.477$\pm$0.026$\pm$0.019$\times10^{-12}$s\cite{XiLifeB} (where the first uncertainty is statistical and the second is systematic).
+	\item Parker's upper bound on the number of magnetic monopoles (for which he took g=137e\cite{monopoles}) in the galaxy was based on the requirement that the rate of the energy loss due to the flux of monopoles is small in comparison to the time scale on which the galactic field can be regenerated.
+\end{itemize}
+\bibliography{sources}
+\bibliographystyle{plain}
+\end{document}
