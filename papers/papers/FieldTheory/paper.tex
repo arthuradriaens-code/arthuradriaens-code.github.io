@@ -1,0 +1,551 @@
+\documentclass[twoside,twocolumn,11pt]{article} %If no option is specified, 10pt is assumed
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{csquotes}
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz-feynman}
+\usepackage{amsmath,amssymb}
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt,margin=0.6in]{geometry} % Document margins, margin=0.8in wasn't there first.
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Possible hidden logic in Standard Model parameters $\bullet$ may 2022} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+\usepackage{cite}
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Possible hidden logic in Standard Model parameters} % Article title
+\author{%
+\textsc{Arthur Adriaens} \\[1ex] % Your name
+\normalsize Ghent University \\ % Your institution
+\normalsize \href{mailto:arthur.adriaens@ugent.be}{arthur.adriaens@ugent.be} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent
+There are a lot of free parameters in the standard model whom are seemingly random and have to be determined by experiment. There have been many theories on why these exact parameters, why not others and possible origins. In this paper we'll delve into possible relations the parameters have with eachother hinting at a possible hidden logic in nature.
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\lettrine[nindent=0em,lines=3]{T} he Standard Model has a lot of free parameters which need to be determined by experiment. If neutrinos are normal Dirac fermions (i.e not Majorana) then, as of 2022, we have 25 (or 26) free parameters in the Standard Model that have to be input by hand \cite{Thomson}:
+\begin{itemize}
+	\item The twelve fermion masses (i.e the twelve Yukawa couplings to the Higgs field)
+	$m_{\nu_1},m_{\nu_2}m_{\nu_3},m_e,m_\mu,m_\tau,m_d,m_s,m_b,m_u,m_c$ and $m_t$
+	\item the three coupling constants $\alpha, G_F$ and $\alpha_S$ (equivalent to $ g',g_W$ and $g_S$)
+	\item The vacuum expectation value and the mass of the Higgs boson $v$ and $m_H$
+	\item the eight mixing angles of the PMNS and CKM matrices $\theta_{12},\theta_{13},\theta_{23},\delta$ and $\lambda,A,\rho,\eta$
+	\item Possible CP violating phase in the strong interaction $\theta_{CP}$ (26th)
+\end{itemize}
+
+\noindent
+The Standard model is by many considered the best theory physicists have ever constructed and makes phenomenally accurate predictions. However these free parameters are a symptom of the SM, namely that it's phenomenological; these are fine-tuned to match the experiments. Despite this there are indications that these parameters should come from a higher theoretical/symmetry principle. We'll discuss some of these rather interesting patterns in this paper.
+%------------------------------------------------
+\section{Why these parameters}
+A first question to ask ourselves is why we see the parameters we see. A possible answer to this is a reformulation of the many-worlds theory, namely there are a bunch of worlds all with different parameters and we observe the ones we observe as we can only live in this world where we happen to have just the right parameters to sustain live. This however is just a way of displacing the question as it doesn't answer what all those worlds are doing there in the first place. Another, more interesting, question is "is this the only way to make a universe?" an analogous question to Einstein's 
+\begin{displayquote}
+	What really interests me is whether God could have created the world any differently
+\end{displayquote}
+For which a possible answer might be that there's a higher theory which reduces to these parameters or some kind of underlying symmetry hidden within these parameters. Just as nature "chose" the simplest groups for the interactions SU(3)${}_{\text{QCD}}\times$SU(2)${}_L\times$U(1)${}_Y \rightarrow$SU(3)$_{\text{QCD}}\times$U(1), it might have had to choose the simplest possible parameters.
+
+\section{Masses of the fermions}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{fermion_masses.png}
+	\caption{Fermion masses}
+	\label{fig:fermion masses}
+\end{figure}
+If we take a look at the masses of the fermions (with the exception of the neutrino's) on a log scale (figure \ref{fig:fermion masses}) we see that the masses within a single generation are similar. This seems unlikely to happen by chance. Likewise, the coupling constants of the three gauge interactions are of a similar order of magnitude, hinting that they might be different low-energy manifestations of a Grand Unified Theory of the forces.
+
+\section{Koide formula}
+It was noticed by Yoshio Koide in 1981 that the charged lepton masses obey the following peculiar relation:
+\begin{equation}
+	\frac{m_{e}+m_{\mu}+m_{\tau}}{\left(\sqrt{m_{e}}+\sqrt{m_{\mu}}+\sqrt{m_{\tau}}\right)^{2}}=0.666661(7) \approx \frac{2}{3} \label{eq:KoideFormula}
+\end{equation}
+The relation is invariant under a change of generation: $m_i \leftrightarrow m_j$ (i and j stand for $e, \mu$or $\tau$), i.e. a S(3) permutation symmetry. In particular, this interesting feature suggests that this democratic behaviour (i.e masses on equal footing) must exist at some point in the mechanism generating the masses.
+Note that the masses used are the "observed" or pole masses, which we'll later see in the "derivation" cause a bit of a problem from a theoretical point of view. The mystery is in the physical value. Not only is the result peculiar, in that three seemingly arbitrary numbers give a simple fraction, but also in that no matter what masses are chosen to stand in place of the electron, muon, and tau, this can only take values between 1/3  (if the three masses were equal) and 1 (if one mass dominates) but the value we got is exactly halfway between the two extremes of all possible combinations.  If by some theory this relation is proven to be correct, this can be used to determine the tau mass as it's easier to infer the electron and muon mass at high precision from experiments:
+\begin{align*}
+	3(m_e + m_\mu + m_\tau) &= 2(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2\\
+	m_e + m_\mu + m_\tau &= 4\sqrt{m_\tau}(\sqrt{m_\mu} + \sqrt{m_e})\\ &\quad+ 4\sqrt{m_\mu m_e}\\
+	0&= m_\tau - 4\sqrt{m_\tau}(\sqrt{m_\mu} + \sqrt{m_e})\\ &+ (m_e + m_\mu - 4\sqrt{m_\mu m_e})\\
+	&\equiv a(\sqrt{m_\tau})^2 + b\sqrt{m_\tau} + c\\
+	\sqrt{m_\tau} &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\\
+	m_\tau &= \left( \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\right)^2
+\end{align*}
+Now filling in the PDG\cite{PDG} values:
+\begin{align*}
+	m_e &= 0.5109989461\pm 0.0000000031 \text{ MeV} \\ m_\mu &= 105.6583745 \pm 0.0000024 \text{ MeV}
+\end{align*}
+we get 
+\begin{align*}
+	b &\equiv -4(\sqrt{m_\mu} + \sqrt{m_e})\\
+	&= -43.97547142\pm 0.00000010 \text{ MeV}^{\frac{1}{2}}\\
+	b^2 &= 1933.842087 \pm 0.000008\text{ MeV}\\
+	c &\equiv m_e + m_\mu - 4\sqrt{m_\mu m_e}\\
+	&= 76.77785956\pm 0.00000032 \text{ MeV}
+\end{align*}
+i.e
+\begin{equation}
+	m_\tau = 1776.969 \pm 0.016\text{ MeV}\label{eq:TauPredictionKoide}
+\end{equation}
+The measured value of the tau lepton in 1982 was $1784.2\pm 3.2$MeV causing many to drop this formula as just a coincidence \cite{WhatPhysicsKoide}, this changed however after 1992 when the new measured value of $m_\tau = 1776.99^{+0.29}_{-0.26}$MeV was released causing people to reconsider the formula. The measured value today is $m_\tau = 1776.86\pm 0.12$ MeV with thus the mass lying within the 1$\sigma$ uncertainty.   \\
+R. Foot \cite{Foot} pointed out that Koide's formula also has a geometric interpretation, if we define the charged lepton mass vector as
+\begin{equation}
+	\mathcal{Y} \equiv (\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})
+\end{equation}
+Then, if we define $\theta$ to be the angle of this vector with (1,1,1) we see that:
+\begin{align*}
+	\cos(\theta)  &= \frac{\mathcal{Y}\cdot (1,1,1)}{|\mathcal{Y}||(1,1,1)|}\\
+	&= \frac{(\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})\cdot (1,1,1)}{|(\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})||(1,1,1)|}\\
+	&= \frac{\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau}}{\sqrt{m_e + m_\mu + m_\tau}\sqrt{3}}\\
+	3\cos(\theta)^2 &= \frac{\left(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau}\right)^2}{(m_e + m_\mu + m_\tau)^2}
+\end{align*}
+i.e for $\cos(\theta)=\frac{1}{\sqrt{2}}$ this reduces to Koide's formula, or in ohter words, plugging in the observed values:
+\begin{equation}
+	\theta = 45.000\text{°} \pm 0.001
+\end{equation}
+Which is oddly perfect.
+%------------------------------------------------
+\section{Derivation}
+The original formula was derived as a consequence of the preon model, this is a theoretical model which states that there are sub-components of quarks and leptons. However progress for this has slowed down as the Standard Model continues to describe almost all particle physics exactly, no evidence for lepton and quark compositeness has been found and some models straight up contradict observations (e.g the existence of the Higgs boson). Many people have tried to derive this relation theoretically but many have stumbled on the QED radiative corrections, with the most relevant one being the 1–loop QED radiative correction
+\begin{equation*}
+	m_{i}^{\text {pole }}=\left[1+\frac{\alpha}{\pi}\left\{\frac{3}{4} \log \left(\frac{\mu^{2}}{\bar{m}_{i}(\mu)^{2}}\right)+1\right\}\right] \bar{m}_{i}(\mu)
+\end{equation*}
+Y. Koide \cite{1990Koide} derives this formula by assuming a U(3)-family nonet Higgs scalars which couple to charged leptons bilinearly, a simple Higgs potential with a term which breaks the U(3)-family into a SU(3)-family will lead to Koide's formula. We assume the U(3) nonet to have the following form:
+\begin{equation}
+	H_{\text {lepton }}=\frac{1}{F} \bar{e}^{i} \Phi_{i}^{j} \Phi_{j}^{\dagger k} e_{k}\label{eq:nonet}
+\end{equation}
+Now assuming the following Higgs scalar potential:
+\begin{align*}
+	V&=\frac{1}{2} \mu^{2} \operatorname{Tr}\left[\Phi \Phi^{\dagger}\right]-\frac{1}{4} \lambda\left(\operatorname{Tr}\left[\Phi \Phi^{\dagger}\right]\right)^{2}\\&\qquad\qquad-\frac{1}{2} \lambda^{\prime} \phi_{0} \phi_{0}^{*} \operatorname{Tr}\left[\Phi_{8} \Phi_{8}^{\dagger}\right]
+\end{align*}
+With
+\begin{align}
+	\begin{gathered}
+		\Phi=\Phi_{8}+\frac{1}{\sqrt{3}} \phi_{0} \boldsymbol{1} \\
+		\Phi_{8}=\sum_{a=1}^{8} \frac{1}{2} \lambda_{a} \phi_{a} \\
+		\phi_{0}=\frac{1}{\sqrt{3}} \operatorname{Tr}[\Phi]
+	\end{gathered}
+\end{align}
+Analogously to the Higgs derivation we're familiar with, we find the minimum of the potential with the conditions $\frac{\partial V}{\partial \phi_0}=0$ and $\frac{\partial V}{\partial \phi_a}=0$ yielding
+\begin{align}
+	\begin{gathered}
+		\mu^{2}-\lambda \operatorname{Tr}\left[\Phi \Phi^{\dagger}\right]-\lambda^{\prime} \operatorname{Tr}\left[\Phi_{8} \Phi_{8}^{\dagger}\right]=0 \\
+		\mu^{2}-\lambda \operatorname{Tr}\left[\Phi \Phi^{\dagger}\right]-\lambda^{\prime} \phi_{0} \phi_{0}^{*}=0
+	\end{gathered}
+\end{align}
+Which leads to 
+\begin{equation}
+	\operatorname{Tr}\left[\Phi_{8} \Phi_{8}^{\dagger}\right] = \phi_{0}\phi_{0}^* = \frac{\mu^2}{2\lambda + \lambda'}
+\end{equation}
+And as $\phi_{0} \phi_{0}^{*}=\operatorname{Tr}[\Phi] \operatorname{Tr}\left[\Phi^{\dagger}\right] / 3$ and $ \operatorname{Tr}\left[\Phi_{8} \Phi_{8}^{\dagger}\right]=\operatorname{Tr}\left[\Phi \Phi^{\dagger}\right]-\operatorname{Tr}[\Phi] \operatorname{Tr}\left[\Phi^{\dagger}\right] / 3$ we get
+\begin{equation}
+	\operatorname{Tr}\left[\Phi \Phi^{\dagger}\right]=\frac{2}{3} \operatorname{Tr}[\Phi] \operatorname{Tr}\left[\Phi^{\dagger}\right]=\frac{2 \mu^{2}}{2 \lambda+\lambda^{\prime}}\label{eq:tracerelation}
+\end{equation}
+From \ref{eq:nonet} the charged lepton mass matrix is given by the vacuum expectation values $\langle\Phi\rangle$:
+\begin{align}
+	M \equiv \sqrt{M}\sqrt{M}^\dagger &= \frac{1}{F}\langle\Phi\rangle \langle\Phi^\dagger\rangle\\
+	\operatorname{Tr}\left[\sqrt{M} \sqrt{M}^{\dagger}\right]&\stackrel{\ref{eq:tracerelation}}{=}\frac{2}{3} \operatorname{Tr}[\sqrt{M}] \operatorname{Tr}\left[\sqrt{M}^{\dagger}\right]
+\end{align}
+Which gives the sum rule \ref{eq:KoideFormula}. Or again, but a bit clearer (with brackets denoting the trace):
+\begin{equation}
+	\frac{[\Phi \Phi]}{[\Phi]^{2}}=\frac{m_{e}+m_{\mu}+m_{\tau}}{\left(\sqrt{m_{e}}+\sqrt{m_{\mu}}+\sqrt{m_{\tau}}\right)^{2}}=\frac{2}{3}
+\end{equation}
+The following mass formula can also be derived from this theory:
+\begin{equation}
+	\frac{\operatorname{det} \Phi}{[\Phi]^{3}}=\frac{\sqrt{m_{e} m_{\mu} m_{\tau}}}{\left(\sqrt{m_{e}}+\sqrt{m_{\mu}}+\sqrt{m_{\tau}}\right)^{3}}=\frac{1}{2 \cdot 3^{5}}=\frac{1}{486}
+\end{equation}
+\section{Sumino mechanism}
+Coming back to the QED corrections we mentioned earlier, the above theorem still deviates after taking these into consideration. The deviation between the formula for the pole mass and the one for the running mass is mostly caused by the logarithmic term in the 1-loop correction. Sumino\cite{Sumino} proposed a model that has a mechanism for cancellation of this term (called "The Sumino model" by Y. Koide). In this model he assumed that the family symmetry is local, and that the logarithmic term is cancelled by that due to the family gauge bosons.
+This model however leads to unwelcome decay modes (i.e the so called $\Delta N_F=2$ interactions\footnote{F denotes family}) and cannot straightforwardly be applied to
+SUSY models because of the non-renormalization theorem\footnote{This is a limitation on how a certain quantity in quantum field theory may be modified by renormalization in the full quantum theory}. Following this T. Yamashita and Y. Koide proposed a modified Sumino model \cite{ModSumino} where the family gauge bosons have an inverted mass hierarchy, this gives a SUSY scenario of the Sumino’s cancellation mechanism between the QED radiative correction and that due to the family gauge bosons.The model predicts a deviation form the e-$\mu$ universality in the pure leptonic tau decays, as the lightest gauge boson mass in their model is a few TeV the deviation will go as $\Delta R_\tau = R_\tau - 1 \sim 10^{-4}$.
+%------------------------------------------------
+\section{Extension to the neutrino sector}
+The light neutrino masses cannot obey Koide's formula, this is easily seen by looking at the approximate formula
+\begin{equation}
+	k_\ell \approx \frac{1}{1+2\sqrt{m_\mu/m_\tau}} \approx \frac{2}{3}
+\end{equation}
+Which is mostly determined by the ratio of the heaviest masses, if neutrino masses are quasi-degenerate this would go like $K_\nu \approx \frac{1}{3}$ and if they obey a normal hierarchical spectrum\footnote{I.e $m_1^2<m_2^2<m_3^2$}
+\begin{equation}
+	K_{v} \approx \frac{1}{1+2 \sqrt[4]{\Delta m_{\odot}^{2} / \Delta m_{\mathrm{A}}^{2}}} \lesssim 0.55
+\end{equation}
+With $\Delta m_\odot^2$ the solar mass squared difference ($m_2^2 - m_1^2$) and $\Delta m_\mathrm{A}^2$ the atmospheric mass squared difference ($m_3^2 - m_2^2$). However if neutrinos acquire their mass via the seesaw mechanism, the mass relation could hold for the masses in the Dirac and/or heavy Majorana mass matrix. I.e., as the light neutrino masses appear as a combination of Dirac and Majorana mass terms: 
+\begin{equation}
+	m_\nu = M_D M_R^{-1} M_D^T
+\end{equation}
+That the relation is fulfilled in $M_D$ and/or $M_R$.
+This was shown by W. Rodejohann and H. Zhang \cite{NeutrinoExtension}. I.e that if we modify the mass relation for light neutrino masses including their Majorana phases, that we can show that there is a relation like Koide's with interesting predictions for neutrinoless double beta decay. We'll start by extending Koide's formula to three arbitrary masses $m_{\mathrm{X},\mathrm{Y},\mathrm{Z}}$:
+\begin{equation*}
+	K \equiv \frac{m_{x}+m_{y}+m_{z}}{\left(\sqrt{m_{x}}+\sqrt{m_{y}}+\sqrt{m_{z}}\right)^{2}}=\frac{1+\epsilon_{1}+\epsilon_{2}}{\left(1+\sqrt{\epsilon_{1}}+\sqrt{\epsilon_{2}}\right)^{2}}
+\end{equation*}
+Where $\epsilon_1 = m_\mathrm{X}/m_\mathrm{Z}$ and $\epsilon_2 = m_\mathrm{Y}/m_\mathrm{Z}$, this function is plotted in figure \ref{fig:epsilon1epsilon2}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{epsilon1epsilon2.pdf}
+	\caption{K in function of $\epsilon_{1}$ and $\epsilon_{2}$ surface plot}
+	\label{fig:epsilon1epsilon2}
+\end{figure}
+Now working in a basis where $M_R$ is diagonal ($M_R =$diag($M_1,M_2,M_3$)) with $M_i$ (for i = 1, 2, 3) being the masses of right-handed neutrinos and assuming lepton mixing stems entirely from the charged lepton sector\footnote{This is the case in e.g flavor symmetry models} (this is a strong assumption but valid as this is more an illustration of principle) then $M_D=$diag($D_1,D_2,D_3$) and the light neutrino masses are simply given by
+\begin{equation}
+	m_i = \frac{D_i^2}{M_i}\label{eq:neutrinoseesaw}
+\end{equation}
+\newpage
+There are now 4 cases which can be considered:
+\begin{enumerate}
+	\item The relation exist in $M_R$ whereas $M_D$ is an identity matrix ($D_i = D_0$)
+	\item The relation exists in $M_D$ whereas $M_R$ is an identity matrix ($M_i = M_0$)
+	\item The relation exists in both $M_R$ and $M_D$
+	\item The eigenvalues of $M_D$ are the same as the charged-lepton masses $m_e$, $m_\mu$ and$ m_\tau$, whereas $M_R$ remains unconstrained
+\end{enumerate}
+The results from the analysis by W. Rodejohann and H. Zhang are quoted below
+\subsection*{Case I}
+In the normal hierarchy case $K_R \approx 2/3$ if $m_1/m_2 \approx 0.03$ while in the inverted case $m_3/m_2 \approx 0.016$
+One directly finds that the empirical relation in right-handed neutrino masses can be achieved for $m_1 \approx 2.5 \times 10^{-4}$ eV in the normal hierarchy case and $m_3 \approx 8\times10^{-4}$ eV in the inverted hierarchy case.
+\subsection*{Case II}
+Because of equation \ref{eq:neutrinoseesaw} this implies $D_i \propto \sqrt{m_i}$ i.e the hierarchy of $D_i$ is milder than that of the light neutrino masses making it that the formula cannot hold.
+\subsection*{Case III}
+Here we get that due to constraints the lightest neutrino's mass cannot exceed $4\times 10^{-3}$eV.
+\subsection*{Case IV}
+Once the light neutrino masses are chosen they would directly imply the mass of the right-handed neutrino, currently we can estimate that the lightest right-handed neutrino would have a mass $M_1$ around the TeV scale, well within the scope of current colliders.\\\\
+The pure light neutrino masses cannot comply with Koide's formula, however the deviation might be due to the effects of non-vanishing Majorana phases. I.e complying with a formula of the form
+\begin{equation}
+	\tilde{K}_{\nu} = \left|\frac{m_1 + m_2 e^{i\phi_1} + m_3 e^{i\phi_2}}{(\sqrt{m_1} + \sqrt{m_2} e^{i\frac{\phi_1}{2}} + \sqrt{m_3}e^{i\frac{\phi_2}{2}})^2}\right|
+\end{equation}
+In the limit $m_1\approx m_2 \approx m_3$ we get
+\begin{equation}
+	\tilde{K}_{\nu} \approx \left|\frac{1 + 1e^{i\phi_1} + 1e^{i\phi_2}}{(1 + e^{i\frac{\phi_1}{2}} + e^{i\frac{\phi_2}{2}})^2}\right|
+\end{equation}
+Which is equal to 2/3 for the degeneracies shown in figure \ref{fig:KnuPhi1Phi2}\footnote{All the relevant code used throughout this paper can be found \href{https://github.com/arthuradriaens-code/Electroweak-and-strong-force}{here}}
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{KnuPhi1Phi2.png}
+	\caption{The allowed parameter space for degenerate masses}
+	\label{fig:KnuPhi1Phi2}
+\end{figure}
+In the normal hierarchical mass spectrum $\tilde{K}_\nu$ turns out (this can be seen from the limit $m_1\sim 0$) to only be sensitive to the phase difference  $\phi=\phi_2-\phi_1$ which should be close to $-\pi$  to get $\tilde{K}_\nu = \frac{2}{3}$. In the inverted hierarchy (similarly taking $m_3\sim 0$) one finds that, to get $\tilde{K}_{\nu}=\frac{2}{3}$, $\phi_1$ should obey $\cos(\phi_1/2) = -\frac{2}{5}$.
+%----------------------------------------------------------------------------------------
+\section{Neutrinoless double beta decay}
+A physical theory without predictions isn't physics at all, so what does the above imply? Majorana neutrinos would make it possible for a process called "neutrinoless double beta decay" to occur, this is when 2 neutrons decay with the 2 neutrino's annihilating eachother as they're their own anti-particle in the Majorana description (see figure \ref{fig:normal and neutrinoless double beta decay}). The decay amplitude is proportional to the effective mass
+\begin{align}
+	m_{ee} &= \left|\sum V_{ei}^2 m_i\right|\\
+	&= \left||V_{e1}|^2m_1 + |V_{e2}|^2e^{i\phi_1}m_2 + |V_{e3}|^2e^{i\phi_2}m_3\right|
+\end{align}
+With V the leptonic flavour mixing matrix. When $\tilde{K}_\nu=\frac{2}{3}$ is satisfied $m_{ee}$ can take any value for $m_1 < 1$eV in the normal hierarchy case, however in the inverted hierarchy case $m_{ee}$ shrinks a lot if $m_3 < 0.01$eV and fixes the effective mass to about $0.025$eV.
+\begin{figure}
+	\begin{minipage}{0.5\textwidth}
+		\begin{minipage}{0.49\textwidth}
+				\centering
+				\begin{tikzpicture}
+					\begin{feynman}
+						\vertex (a0) {\(n\)};
+						\vertex[right=3cm of a0] (a1) {\(p^+\)};
+						\vertex[right=1.5cm of a0] (am);
+						\vertex[right=0.5cm of am] (awi);
+						\vertex[above=1cm of awi] (aw);
+						\vertex[right=1cm of aw] (avm);
+						\vertex[above=0.3cm of avm] (av1) {\(\bar{\nu}_e\)};
+						\vertex[below=0.3cm of avm] (av0) {\(e^-\)};
+						
+						\vertex[above=3.7cm of a0] (b0) {\(n\)};
+						\vertex[right=3cm of b0] (b1) {\(p^+\)};
+						\vertex[right=1.5cm of b0] (bm);
+						\vertex[right=0.5cm of bm] (bwi);
+						\vertex[below=1cm of bwi] (bw);
+						\vertex[right=1cm of bw] (bvm);
+						\vertex[above=0.3cm of bvm] (bv1) {\(\bar{\nu}_e\)};
+						\vertex[below=0.3cm of bvm] (bv0) {\(e^-\)};
+						
+						\diagram* {
+							{[edges=fermion]
+								(a0) -- (am) -- (a1)
+							},
+							{[edges=boson,edge label= W]
+								(am) -- (aw)
+							},
+							{(av1) -- [fermion] (aw) --[fermion] (av0)},
+							
+							{[edges=fermion]
+								(b0) -- (bm) -- (b1)
+							},
+							{[edges=boson,edge label= W]
+								(bm) -- (bw)
+							},
+							(bv1) -- [fermion] (bw) --[fermion] (bv0),
+							
+						};
+					\end{feynman}
+				\end{tikzpicture}
+		\end{minipage}
+		\begin{minipage}{0.49\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{feynman}
+					\vertex (a0) {\(n\)};
+					\vertex[right=3cm of a0] (a1) {\(p^+\)};
+					\vertex[right=1.5cm of a0] (am);
+					\vertex[right=0.5cm of am] (awi);
+					\vertex[above=1cm of awi] (aw);
+					\vertex[right=1cm of aw] (avm);
+					\vertex[above=0.85cm of aw] (av1);
+					\vertex[below=0.3cm of avm] (av0) {\(e^-\)};
+					
+					\vertex[above=3.7cm of a0] (b0) {\(n\)};
+					\vertex[right=3cm of b0] (b1) {\(p^+\)};
+					\vertex[right=1.5cm of b0] (bm);
+					\vertex[right=0.5cm of bm] (bwi);
+					\vertex[below=1cm of bwi] (bw);
+					\vertex[right=1cm of bw] (bvm);
+					\vertex[below=0.85cm of bw] (bv1);
+					\vertex[above=0.3cm of bvm] (bv0) {\(e^-\)};
+					\vertex[below=0.6cm of bw] (ann) {X};
+					
+					\diagram* {
+						{[edges=fermion]
+							(a0) -- (am) -- (a1)
+						},
+						{[edges=boson,edge label= W]
+							(am) -- (aw)
+						},
+						{(av1) -- [fermion] (aw) --[fermion] (av0)},
+						
+						{[edges=fermion]
+							(b0) -- (bm) -- (b1)
+						},
+						{[edges=boson,edge label= W]
+							(bm) -- (bw)
+						},
+						(bv1) -- [fermion] (bw) --[fermion] (bv0),
+						
+					};
+				\end{feynman}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{minipage}
+	\caption{"normal" and neutrinoless double beta decay}
+	\label{fig:normal and neutrinoless double beta decay}
+\end{figure}
+\section{Speculative extension}
+C. Brannen proposed \cite{Brannen2006TheLM} (again derived using the preon model) that the lepton masses are given by the squares of the eigenvalues of a circulant matrix with real eigenvalues, corresponding to the relation
+\begin{equation}
+	\sqrt{m_{n}}=\mu\left[1+2 \eta \cos \left(\delta+\frac{2 \pi}{3} \cdot n\right)\right] \label{eq:circulantmatrix}
+\end{equation}
+with $n\in{1,2,3}$, fitting with the experimental values for the masses of the charged leptons we get (given up to 7 digits of accuracy\footnote{more are needed to compute the actual mass values from this function}) $\eta^2 = 0.500003(23) \approx \frac{1}{2}$ and $\delta_\ell = 0.2222220(19) \approx \frac{2}{9}$ which seems pretty, however the experimental data is in conflict with having both $\eta^2 = \frac{1}{2}$ and $\delta_\ell = \frac{2}{9}$. Brannen notes however that the difference from $\frac{2}{9}$ might be written as:
+\begin{equation}
+	\delta_\ell - \frac{2}{9} = 1.75 \times 10^{-7}=\frac{4 \pi}{3^{12}}\left(\alpha+\mathcal{O}\left(\alpha^{2}\right)\right)
+\end{equation}
+I.e that this difference is the result of a deeper theory which we might one day compute just like with the g factor's $g_e-2$. Also note however that the square root of the mass scale $\mu_\ell$ takes the rather arbitrary value of $17.71608$ MeV$^{\frac{1}{2}}$. 
+Brannen then computed the tau mass using the constriction $\eta^2=\frac{1}{2}$ giving the prediction:
+\begin{equation}
+	m_\tau = 1776.968921(158)\text{MeV}
+\end{equation}
+Which is almost the same prediction as the one done from Koide \ref{eq:TauPredictionKoide} but way more precise.
+Note however that he proposed that "the lepton masses" are given by this formula, if we again assume $\eta^2 = \frac{1}{2}$ then, following the oscillation data, the neutrino masses should be around:
+\begin{align}
+	m_1&=0.0004\text{eV}\\
+	m_2 &= 0.009\text{eV}\\
+	m_3 &= 0.05\text{eV}
+\end{align}
+These masses approximately give the oscillation data as well as a modification of Koide's relation:
+\begin{equation}
+	\frac{m_1 + m_2 + m_3}{(-\sqrt{m_1} + \sqrt{m_2} + \sqrt{m_3})^2} = \frac{2}{3}
+\end{equation}
+note that this is similar to the previously considered model with Majorana phases. We can then compute the corresponding $\delta_\nu$ and $\mu_\nu$:
+\begin{align}
+	\delta_\nu &= \delta_\ell + \frac{\pi}{12}\\
+	\frac{\mu_\ell}{\mu_\nu} &= 3^{11}
+\end{align}
+Brannen suggested that a possible explanation for these values is that transforming from the right handed particle to the left handed, the neutrino picks up a phase difference that is a fraction of pi (could be related to the Majorana nature) which makes it have to pass 12 stages to make the transition. While the electron only requires a single stage making the mass hierarchy between the charged and neutral lepton a power of $12-1=11$. If we write out the formula for the neutrino's as
+\begin{equation}
+	m_n = \frac{\mu_\ell}{3^{11}}\left[1 + \sqrt{2}\cos(\delta_\ell + \frac{\pi}{12} + \frac{2\pi}{3}n)\right]
+\end{equation}
+we get the masses
+\begin{align}
+	m_1 &= 0.000383462480(38)\text{eV}\\
+	m_2 &= 0.00891348724(79)\text{eV}\\
+	m_3 &= 0.0507118044(45)\text{eV}
+\end{align}
+And squared differences 
+\begin{align}
+	m_2^2 - m_1^2 &= 7.930321129(141)\times 10^{-5}\text{eV}^2\\
+	m_3^2 - m_2^2 &= 2.49223685(44)\times 10^{-3} \text{eV}^2
+\end{align}
+Note that the PDG\cite{PDG} gives
+\begin{align}
+	\Delta m_{21}^2 &= 7.53\pm 0.18\times10^{-5} \text{eV}^2\\
+	\Delta m_{32}^2 &= 2.453\pm 0.033 \times 10^{-3}\text{eV}^2
+\end{align} 
+P. $\dot{\text{Z}}$enczykowski argued \cite{Zenczykowski} that the $Z_3$-symmetry formula found by Brannen \ref{eq:circulantmatrix} can also be used in the quark sector, more specifically using the values
+\begin{align}
+	m_{u} &=1.7-3.3 \text{MeV}\\
+	m_{c} &=1270_{-90}^{+70} \text{MeV}\\
+	m_{t} &=172000 \pm 1600 \text{MeV}\\
+	m_{d} &=4.1-5.8 \text{MeV}\\
+	m_{s} &=101_{-21}^{+29} \text{MeV}\\
+	m_{b} &=4190_{-60}^{+180}\text{MeV}
+\end{align}
+Which are the masses at $\mu =  2 GeV$
+And the formula of the form ($\eta^2\equiv \frac{1}{2}$)
+\begin{equation}
+	\sqrt{m_{j}}=\sqrt{M_{f}}\left(1+\sqrt{2}\cos \left(\frac{2 \pi j}{3}+\delta_{f}\right)\right)
+\end{equation}
+He finds $\delta_U=\frac{2}{27}=\frac{2}{9} \times \frac{1}{3} \text { and } \delta_D=\frac{4}{27}=\frac{2}{9} \times \frac{2}{3}$  hinting at a relation with the charge of the particle family (albeit reversed as the up quarks have charge $\frac{2}{3}$e and the down quarks $-\frac{1}{3}e$\footnote{do note that the leptons have charge $\frac{3}{3}e=1e$}, also note that $\frac{2}{3}\times\frac{1}{3}\times\frac{3}{3} \approx \delta$). These values for $\delta$ found by  $\dot{\text{Z}}$enczykowski and the square root in front of the cosine deviate from their perfect value at $\mu = M_Z$ with 0.5 \% and 0.2 \% respectively.
+%----------------------------------------------------------------------------------------
+\section{CKM}
+Finally we'd like to mention a relation noticed by K. Nishida\cite{CKM}. The Cabibbo–Kobayashi–Masukawa (CKM) matrix for which Makoto Kobayashi and Toshihide Maskawa received the nobel prize in 2008\footnote{Even though  Nicola Cabibbo also really would have deserved it} is a unitary matrix which specifies the mismatch of quantum states of quarks when they propagate freely and when they take part in the weak interactions, it takes the form
+\begin{equation}
+	V_{\mathrm{CKM}}= 
+		\left[\begin{array}{ccc}
+		\left|V_{u d}\right| & \left|V_{u s}\right| & \left|V_{u b}\right| \\
+		\left|V_{c d}\right| & \left|V_{c s}\right| & \left|V_{c b}\right| \\
+		\left|V_{t d}\right| & \left|V_{t s}\right| & \left|V_{t b}\right|
+		\end{array}\right]
+\end{equation}
+with the various $|V_{ij}|^2$ representing the probability that the quark of flavor j decays into a quark of flavor i and describes a sort of rotation from the strong to the weak force:
+\begin{equation}
+	\left[\begin{array}{c}
+		d^{\prime} \\
+		s^{\prime} \\
+		b^{\prime}
+	\end{array}\right]=\left[\begin{array}{lll}
+		V_{\mathrm{ud}} & V_{\mathrm{us}} & V_{\mathrm{ub}} \\
+		V_{\mathrm{cd}} & V_{\mathrm{cs}} & V_{\mathrm{cb}} \\
+		V_{\mathrm{td}} & V_{\mathrm{ts}} & V_{\mathrm{tb}}
+	\end{array}\right]\left[\begin{array}{l}
+		d \\
+		s \\
+		b
+	\end{array}\right]
+\end{equation}
+Nishida noticed that the up-type quark masses and down-type quark masses are also related via this matrix, more particularly he noticed that\footnote{notice the reoccurrence of the square roots just as in Koide's formula}
+\begin{equation}
+	\left[\begin{array}{c}
+		\sqrt{m_d} \\
+		\sqrt{m_s} \\
+		\sqrt{m_b}
+	\end{array}\right]\propto
+	\left[\begin{array}{c}
+		\sqrt{m_u} \\
+		\sqrt{m_c} \\
+		\sqrt{m_t}
+	\end{array}\right]
+	\left[\begin{array}{lll}
+		V_{\mathrm{ud}} & V_{\mathrm{us}} & V_{\mathrm{ub}} \\
+		V_{\mathrm{cd}} & V_{\mathrm{cs}} & V_{\mathrm{cb}} \\
+		V_{\mathrm{td}} & V_{\mathrm{ts}} & V_{\mathrm{tb}}
+	\end{array}\right]
+\end{equation}
+To arrive at this relation he started by defining
+\begin{align}
+	\boldsymbol{e}^{(u)} &\equiv \frac{1}{\sqrt{m_{u}+m_{c}+m_{t}}}\left(\begin{array}{c}
+		\sqrt{m_{u}} \\
+		\sqrt{m_{c}} \\
+		\sqrt{m_{t}}
+	\end{array}\right)\\ \boldsymbol{e}^{(d)} &\equiv \frac{1}{\sqrt{m_{d}+m_{s}+m_{b}}}\left(\begin{array}{c}
+		\sqrt{m_{d}} \\
+		\sqrt{m_{s}} \\
+		\sqrt{m_{b}}
+	\end{array}\right)
+\end{align}
+And trying to find the matrix V which satisfies the relation
+\begin{equation}
+	\boldsymbol{e}^{(u)} = V\boldsymbol{e}^{(d)}
+\end{equation}
+After a series of calculations he finds
+\begin{equation}
+	V=\left(\begin{array}{ccc}
+		0.9744 & -0.2246 & 0.004983 \\
+		0.2244 & 0.9722 & -0.06701 \\
+		0.01020 & 0.06642 & 0.9977
+	\end{array}\right)
+\end{equation}
+Which, in absolute value, is reasonably close to the experimentally determined value
+\begin{equation*}
+	\left[\begin{array}{ccc}
+		0.97434_{-0.00012}^{+0.00011} & 0.22506 \pm 0.00050 & 0.00357 \pm 0.00015 \\
+		0.22492 \pm 0.00050 & 0.97351 \pm 0.00013 & 0.0411 \pm 0.0013 \\
+		0.00875_{-0.00033}^{+0.00032} & 0.0403 \pm 0.0013 & 0.99915 \pm 0.00005
+	\end{array}\right]
+\end{equation*}
+Through calculating the invariant amplitude $\mathcal{M}$ including weak quark currents $(J_\mu)_q$ as $d,s,b\rightarrow u,c,t$ written as 
+\begin{equation}
+	\mathcal{M}=\frac{4 G}{\sqrt{2}}\left(J^{\mu}\right)_{F}\left(J_{\mu}\right)_{q}
+\end{equation}
+with
+\begin{equation}
+	\left(J_{\mu}\right)_{q}=\left(\bar{u}_{u} \bar{u}_{c} \bar{u}_{t}\right) \gamma_{\mu} \frac{1}{2}\left(1-\gamma^{5}\right) V_{\mathrm{CKM}}\left(\begin{array}{l}
+		u_{d} \\
+		u_{s} \\
+		u_{b}
+	\end{array}\right)
+\end{equation}
+He gets that the variation of the Lagrangian is 
+\begin{align}
+	\delta \mathcal{L}=& \cdots-i \frac{g}{\sqrt{2}}\left(\chi^{(s)} 0\right) \gamma^{\mu}\left(1-\gamma^{5}\right)\left(\begin{array}{c}
+		\chi^{(s)} \\
+		0
+	\end{array}\right) W_{\mu}^{+} \\
+	& \times \sqrt{m_{u}+m_{c}+m_{t}} \sqrt{m_{d}+m_{s}+m_{b}} \sin \theta \delta \theta
+\end{align}
+With $\theta$ the angle between $\boldsymbol{e}^{(u)}$ and $\boldsymbol{e}^{(d)}$. Because of this variation of the Lagrangian Nishida makes the argument that the difference between the CKM matrix he found and the one experimentally observed is due to it being a zeroth order approximation as in general it's momentum-dependent. In the first order approximation we'll have to replace the components $\sqrt{m_{i}^{(q)}}$ of $e^{(q)}$ by $\sqrt{E_{i}^{(q)}+m_{i}^{(q)}}$.
+\section*{Conclusion}
+Even though we've come very far there is still a long way to go with the standard model, especially with finding the origins of the free parameters. Most of the physics we currently have can be derived through symmetry, and as there's a lot of that in the many possible inter-parameter relations we have explored in this paper it seems like there might be some jet to be discovered new physics showing signs of itself. Only time will tell if this will come true and there are beautiful relations between the values of nature or if it all turns out to be a numerological coincidence.
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\bibliography{sources}
+\bibliographystyle{plain}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
