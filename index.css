@@ -8,7 +8,7 @@ body , html {
 body {
 		background-image: url('./images/flowerssmudged.png');
 		background-repeat:no-repeat;
-		background-attachment: fixed right top;
+		background-attachment: fixed;
 		background-size: cover;
 }
 header {
