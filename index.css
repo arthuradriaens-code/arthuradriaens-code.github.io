@@ -6,7 +6,9 @@ body , html {
 		color: #fff;
 }
 body {
-		background: url(./images/flowerssmudged.png) no-repeat right top;
+		background-image: url('./images/flowerssmudged.png');
+		background-repeat:no-repeat;
+		background-attachment: fixed right top;
 		background-size: cover;
 }
 header {
