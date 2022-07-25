@@ -1,17 +1,9 @@
 body , html {
-		margin:0;
+		margin: 0;
 		padding:0;
 		font-family: 'Open Sans' , sans-serif;
 		background-color: #DDDBD7;
 		color: #fff;
-}
-#vanta {
-	z-index: 0;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 100%
 }
 header {
 		margin-top: 10px;
@@ -20,6 +12,14 @@ header {
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;		
+}
+.vanta {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
 }
 header > img {
 	border-radius: 20px ;
@@ -41,6 +41,15 @@ ul {
 	max-width: 700px;
 }
 
+.box {
+		background-color: #fffa;
+		backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+		-webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+		border-radius: 10em;
+		padding: 0.5em;
+		margin: 0 auto;
+		max-width: 800px;
+}
 ul > li {
 		background-color: #fffa;
 		backdrop-filter: blur(10px) saturate(160%) contrast(180%);
@@ -57,17 +66,31 @@ ul > li > h3 {
 		gap: 0em;
 }
 ul > li > p {
-		display: flex;
-		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		gap: 0em;
 }
-a {
-		color: black;
-		text-decoration: none;
+.box > h3 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 0em;
+}
+.box > p {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 0em;
+}
+.box > ul > li {
+	color: black;
 }
 main > h2 {
+	text-align: center;
+}
+p {
 	text-align: center;
 }
 .buttons {
