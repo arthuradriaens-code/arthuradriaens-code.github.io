@@ -93,6 +93,7 @@ main > h2 {
 }
 p {
 	text-align: center;
+	font-size: 14pt;
 }
 .buttons {
 	   display:flex;
