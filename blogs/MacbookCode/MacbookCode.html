@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- volgende 2 lijnen zijn mathjax implementatie -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How to code with a macbook</title>
+</head>
+<header class="header">
+  <h1>How to code with a macbook</h1>
+</header>
+<body class=body>
+  <h2>How does a unix computer handle packages?</h2>
+  This isn't necessary knowledge to program on your mac, but it does make it easier to memorize what follows.
+  In general, the filesystem of a unix-based PC (e.g a macbook but also all linux platforms)
+  have 'root' denoted as "/" in the filepath as the highest "file", next you have a lot of folders:
+<img src="images/lsroot.png" alt="an image of the files at root">
+  ignore the line ">ls", we will later on learn what this is. We're located at /home/USERNAME e.g /home/arthur, this is where you find your familiar folders such as Downloads, Desktop,... \
+  Now when you install a program, it gets installed to the directory /bin. This is thus also the folder being checked when you search for a program to launch.
+  <h2>Terminal</h2>
+  That crazy looking program hackers seem to be working in in hollywood movies is actually going to be your second home if you get good at coding:
+  <img src="images/terminal.jpg" alt="screenshot of macbook terminal">
+  This is the terminal app, open it by just opening spotlight and typing "terminal" or if that doesn't work go to your launchpad \(\rightarrow\) other \(\rightarrow\) terminal and click it. While we opened it, right click the icon on the bottom of the screen and pin it so you don't have to search for it every time (options\(\rightarrow\) keep in dock). This is the cockpit of your pc, all the apps work through this terminal in the background, people used to have to do everything via this terminal but nowadays with everything being graphical it only gets used by.. well.. Us!: Programmers. you might see a "~" at the line you're currently on in the app, this means the "home directory", i.e the USERNAME directory where all your files are located such as Downloads and Documents. Now I'll tell you about some basic commands you'll use very often in your coding journey and you can now test out by typing them in the terminal and pressing enter:
+  <ul>
+    <li>
+      ls: See all the files in the current directory
+    </li>
+    <li>
+      cd: move to a directory, i.e "cd Downloads" would move to the directory downloads, to go up a directory type "cd ..". Notice that you can only move to Downloads if it's in your current directory, you can, however always go to whatever directory you want if you type the full file path e.g "cd /home/USERNAME/Downloads". With the exception being that if you want to go back to the home directory you can just "cd ~". 
+    </li>
+  </ul>
+</body>
