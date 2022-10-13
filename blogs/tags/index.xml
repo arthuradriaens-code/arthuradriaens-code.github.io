@@ -1,31 +1,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Blogs</title>
-	<link>https://arthuradriaens-code.github.io/blogs/tags/</link>
+	<link>https://arthuradriaens-code.github.io/tags/</link>
 	<description>Recent content in Tags on Blogs</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
 	<lastBuildDate>Wed, 12 Oct 2022 22:22:11 +0200</lastBuildDate>
     
-        <atom:link href="https://arthuradriaens-code.github.io/blogs/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://arthuradriaens-code.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
 		<title>Programming On A Macbook</title>
-		<link>https://arthuradriaens-code.github.io/blogs/programmingonmacbook/</link>
+		<link>https://arthuradriaens-code.github.io/programmingonmacbook/</link>
 		<pubDate>Wed, 12 Oct 2022 22:22:11 +0200</pubDate>
 		
-		<guid>https://arthuradriaens-code.github.io/blogs/programmingonmacbook/</guid>
+		<guid>https://arthuradriaens-code.github.io/programmingonmacbook/</guid>
 		<description>&lt;h2 id=&#34;how-does-a-unix-computer-handle-packages&#34;&gt;How does a unix computer handle packages?&lt;/h2&gt;
 &lt;p&gt;This isn&amp;rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows.
 In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms)
 have &amp;lsquo;root&amp;rsquo; denoted as &amp;ldquo;/&amp;rdquo; in the filepath as the highest &amp;ldquo;file&amp;rdquo;, next you have a lot of folders:
-&lt;img src=&#34;https://arthuradriaens-code.github.io/blogs/lsroot.png&#34; alt=&#34;an image of the files at root&#34;&gt;
+&lt;img src=&#34;https://arthuradriaens-code.github.io/lsroot.png&#34; alt=&#34;an image of the files at root&#34;&gt;
 ignore the line &amp;ldquo;&amp;gt;ls&amp;rdquo;, we will later on learn what this is. We&amp;rsquo;re located at /home/USERNAME e.g /home/arthur, this is where you find your familiar folders such as Downloads, Desktop,&amp;hellip;
 Now when you install a program, it gets installed to the directory /bin. This is thus also the folder being checked when you search for a program to launch.&lt;/p&gt;
 &lt;h2 id=&#34;terminal&#34;&gt;Terminal&lt;/h2&gt;
 &lt;p&gt;That crazy looking program hackers seem to be working in in hollywood movies is actually going to be your second home if you get good at coding:
-&lt;img src=&#34;https://arthuradriaens-code.github.io/blogs/terminal.jpg&#34; alt=&#34;screenshot of macbook terminal&#34;&gt;
+&lt;img src=&#34;https://arthuradriaens-code.github.io/terminal.jpg&#34; alt=&#34;screenshot of macbook terminal&#34;&gt;
 This is the terminal app, open it by just opening spotlight and typing &amp;ldquo;terminal&amp;rdquo; or if that doesn&amp;rsquo;t work go to your launchpad → other → terminal and click it (yours isn&amp;rsquo;t going to have the pinguin, nor the apple, house, tilde and green symbol). Now that we have it open, right click the icon on the bottom of the screen and pin it so you don&amp;rsquo;t have to search for it every time (options → keep in dock). If by opening a browser by clicking on the app icon or opening a file from finder is ordering a flight to somewhere then this is the cockpit of your pc, from here you control the plane. All the apps work through this terminal in the background, people used to have to do everything via this terminal but nowadays with everything being graphical it only gets used by.. well.. Us!: Programmers. you might see a &amp;ldquo;~&amp;rdquo; at the line you&amp;rsquo;re currently on in the app, this means the &amp;ldquo;home directory&amp;rdquo;, i.e the USERNAME (In my case arthuradriaens) directory where all your files are located such as Downloads and Documents. Now I&amp;rsquo;ll tell you about some basic commands you&amp;rsquo;ll use very often in your coding journey and you can now test out by typing them in the terminal and pressing enter:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;up,down,left and right arrows: move around, e.g up arrow shows you the previous run command and left and right mvoes around the text you typed in the terminal&lt;/li&gt;
