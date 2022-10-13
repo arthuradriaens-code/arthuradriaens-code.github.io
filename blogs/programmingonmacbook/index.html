@@ -1,199 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Programming On A Macbook | Blogs</title>
-<meta name="keywords" content="computers, unix">
-<meta name="description" content="How does a unix computer handle packages? This isn&rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have &lsquo;root&rsquo; denoted as &ldquo;/&rdquo; in the filepath as the highest &ldquo;file&rdquo;, next you have a lot of folders: ignore the line &ldquo;&gt;ls&rdquo;, we will later on learn what this is.">
-<meta name="author" content="">
-<link rel="canonical" href="https://arthuradriaens-code.github.io/blogs/programmingonmacbook/">
-<link crossorigin="anonymous" href="/blogs/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/blogs/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://arthuradriaens-code.github.io/blogs/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://arthuradriaens-code.github.io/blogs/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://arthuradriaens-code.github.io/blogs/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://arthuradriaens-code.github.io/blogs/apple-touch-icon.png">
-<link rel="mask-icon" href="https://arthuradriaens-code.github.io/blogs/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:title" content="Programming On A Macbook" />
-<meta property="og:description" content="How does a unix computer handle packages? This isn&rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have &lsquo;root&rsquo; denoted as &ldquo;/&rdquo; in the filepath as the highest &ldquo;file&rdquo;, next you have a lot of folders: ignore the line &ldquo;&gt;ls&rdquo;, we will later on learn what this is." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://arthuradriaens-code.github.io/blogs/programmingonmacbook/" /><meta property="article:section" content="" />
-<meta property="article:published_time" content="2022-10-12T22:22:11+02:00" />
-<meta property="article:modified_time" content="2022-10-12T22:22:11+02:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Programming On A Macbook"/>
-<meta name="twitter:description" content="How does a unix computer handle packages? This isn&rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have &lsquo;root&rsquo; denoted as &ldquo;/&rdquo; in the filepath as the highest &ldquo;file&rdquo;, next you have a lot of folders: ignore the line &ldquo;&gt;ls&rdquo;, we will later on learn what this is."/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Programming On A Macbook",
-      "item": "https://arthuradriaens-code.github.io/blogs/programmingonmacbook/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Programming On A Macbook",
-  "name": "Programming On A Macbook",
-  "description": "How does a unix computer handle packages? This isn\u0026rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have \u0026lsquo;root\u0026rsquo; denoted as \u0026ldquo;/\u0026rdquo; in the filepath as the highest \u0026ldquo;file\u0026rdquo;, next you have a lot of folders: ignore the line \u0026ldquo;\u0026gt;ls\u0026rdquo;, we will later on learn what this is.",
-  "keywords": [
-    "computers", "unix"
-  ],
-  "articleBody": "How does a unix computer handle packages? This isn’t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have ‘root’ denoted as “/” in the filepath as the highest “file”, next you have a lot of folders: ignore the line “\u003els”, we will later on learn what this is. We’re located at /home/USERNAME e.g /home/arthur, this is where you find your familiar folders such as Downloads, Desktop,… Now when you install a program, it gets installed to the directory /bin. This is thus also the folder being checked when you search for a program to launch.\nTerminal That crazy looking program hackers seem to be working in in hollywood movies is actually going to be your second home if you get good at coding: This is the terminal app, open it by just opening spotlight and typing “terminal” or if that doesn’t work go to your launchpad → other → terminal and click it (yours isn’t going to have the pinguin, nor the apple, house, tilde and green symbol). Now that we have it open, right click the icon on the bottom of the screen and pin it so you don’t have to search for it every time (options → keep in dock). If by opening a browser by clicking on the app icon or opening a file from finder is ordering a flight to somewhere then this is the cockpit of your pc, from here you control the plane. All the apps work through this terminal in the background, people used to have to do everything via this terminal but nowadays with everything being graphical it only gets used by.. well.. Us!: Programmers. you might see a “~” at the line you’re currently on in the app, this means the “home directory”, i.e the USERNAME (In my case arthuradriaens) directory where all your files are located such as Downloads and Documents. Now I’ll tell you about some basic commands you’ll use very often in your coding journey and you can now test out by typing them in the terminal and pressing enter:\nup,down,left and right arrows: move around, e.g up arrow shows you the previous run command and left and right mvoes around the text you typed in the terminal ls: See all the files in the current directory cd: move to a directory, i.e “cd Downloads” would move to the directory downloads, to go up a directory type “cd ..”. Notice that you can only move to Downloads if it’s in your current directory, you can, however always go to whatever directory you want if you type the full file path e.g “cd /home/USERNAME/Downloads”. With the exception being that if you want to go back to the home directory you can just “cd” (i.e without any arguments). Homebrew To install programs and update them we’ll need something called a “package manager”, this makes our lives way easier. The package manager I use for macbook (and probably is the only one available) is called homebrew and is installed by going to Their website and following the provided instructions (you’re not stupid, I don’t have to explain this to you).\nUsing homebrew After you’re done installing try out homebrew by installing python! To do this simply type “brew install python” and look at it doing everything for you! To install packages that you might need in python (e.g numpy, matplotlib,…) you use pip so for example “pip install numpy” installs numpy. A good command to memorize is “brew upgrade”, this upgrades all your packages to their latest version.\nUsing the terminal to launch programs Say you created a file hello.py (e.g using Vim which we’ll get to later) in your downloads directory, to execute this file go to your downloads directory in the terminal (using cd as mentioned before) and type “python hello.py”. To stop a program that freezes in your terminal you can hit the key combination “ctrl+c”.\nVim It can be quite useful (and fast) to stay in the terminal and not have to open up a text editor to write your programs, a tool I like quite a lot for this is vim. Of course this is optional and you can still use vscode or something similar if you want to but this can also be useful to quickly change a file. You install it the way you would (now) install any program, by writing “brew install vim” in your terminal and hitting enter. To make for example the file hello.py in our downloads folder we can now move to our Downloads folder and type “vim hello.py”. You might find this weird at first as you can’t really type anything, this is because vim has “modes” and you’re now in “command mode”, to insert text hit the “i” key so you enter into “insert” mode. You can now start typing, as you get better at vim you’ll really appreciate this “mode” style of typing as a lot can be done using the “command” mode, but for now we’ll keep it simple and say that you can just type something like “print(“hello”)” and write and quit by hitting the “escape” key to get back into command mode and typing “:wq” to Write (w) and Quit (q). To try out vim open op a large text file/program (basically the same thing as extensions like “.txt” or “.py” don’t really mean anything and are just like the name of the program) with vim and in command mode move around using the “h”, “j”, “k” and “l” keys. These keys are the standard for moving around the file as you don’t have to leave your fingers off the keyboard, you can jump a lot up (or down) by “repeating” e.g typing “10k” will make your cursor jump up 10 lines (same for “10j”) it might take some time to get used to a lot of these commands but some useful ones are:\nyy: copy the full line p: paste a: enter insert mode after the current character dw: delete word, i.e delete the word you’re standing on ciw: change in word, delete the word you’re standing on and go into insert mode . : yes just the “.” key, this repeats an action, so if you for example did a “ciw” and wrote “rabbit” if you then hit escape to go into command mode and hovered over the word “bird” and hit dot, the word will change to “rabbit”. o: insert below the current line w: word, i.e move forward a full word b: back, i.e move backwards a full word G: move all the way down in a file gg: move all the way up in a file u: undo the previous command ",
-  "wordCount" : "1138",
-  "inLanguage": "en",
-  "datePublished": "2022-10-12T22:22:11+02:00",
-  "dateModified": "2022-10-12T22:22:11+02:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://arthuradriaens-code.github.io/blogs/programmingonmacbook/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Blogs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://arthuradriaens-code.github.io/blogs/favicon.ico"
-    }
-  }
-}
-</script>
+<html lang="en">
+<head>
+	<title>Programming on a Macbook | Blogs</title>
+	<link rel="canonical" href="https://arthuradriaens-code.github.io/blogs/">
+	<link rel='alternate' type='application/rss+xml' title="Blogs RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="How does a unix computer handle packages? This isn&rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have &lsquo;root&rsquo; denoted as &ldquo;/&rdquo; in the filepath as the highest &ldquo;file&rdquo;, next you have a lot of folders: ignore the line &ldquo;&gt;ls&rdquo;, we will later on learn what this is.">
+	<meta name="keywords" content="computers, unix">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
 </head>
+<body>
+<main>
+<header><h1 id="tag_Programming On A Macbook">Programming On A Macbook</h1></header>
+<article>
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://arthuradriaens-code.github.io/blogs/" accesskey="h" title="Blogs (Alt + H)">Blogs</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title">
-      Programming On A Macbook
-    </h1>
-    <div class="post-meta"><span title='2022-10-12 22:22:11 +0200 CEST'>October 12, 2022</span>
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="how-does-a-unix-computer-handle-packages">How does a unix computer handle packages?<a hidden class="anchor" aria-hidden="true" href="#how-does-a-unix-computer-handle-packages">#</a></h2>
+<h2 id="how-does-a-unix-computer-handle-packages">How does a unix computer handle packages?</h2>
 <p>This isn&rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows.
 In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms)
 have &lsquo;root&rsquo; denoted as &ldquo;/&rdquo; in the filepath as the highest &ldquo;file&rdquo;, next you have a lot of folders:
-<img loading="lazy" src="/lsroot.png" alt="an image of the files at root"  />
-
+<img src="/lsroot.png" alt="an image of the files at root">
 ignore the line &ldquo;&gt;ls&rdquo;, we will later on learn what this is. We&rsquo;re located at /home/USERNAME e.g /home/arthur, this is where you find your familiar folders such as Downloads, Desktop,&hellip;
 Now when you install a program, it gets installed to the directory /bin. This is thus also the folder being checked when you search for a program to launch.</p>
-<h2 id="terminal">Terminal<a hidden class="anchor" aria-hidden="true" href="#terminal">#</a></h2>
+<h2 id="terminal">Terminal</h2>
 <p>That crazy looking program hackers seem to be working in in hollywood movies is actually going to be your second home if you get good at coding:
-<img loading="lazy" src="/terminal.jpg" alt="screenshot of macbook terminal"  />
-
+<img src="/terminal.jpg" alt="screenshot of macbook terminal">
 This is the terminal app, open it by just opening spotlight and typing &ldquo;terminal&rdquo; or if that doesn&rsquo;t work go to your launchpad → other → terminal and click it (yours isn&rsquo;t going to have the pinguin, nor the apple, house, tilde and green symbol). Now that we have it open, right click the icon on the bottom of the screen and pin it so you don&rsquo;t have to search for it every time (options → keep in dock). If by opening a browser by clicking on the app icon or opening a file from finder is ordering a flight to somewhere then this is the cockpit of your pc, from here you control the plane. All the apps work through this terminal in the background, people used to have to do everything via this terminal but nowadays with everything being graphical it only gets used by.. well.. Us!: Programmers. you might see a &ldquo;~&rdquo; at the line you&rsquo;re currently on in the app, this means the &ldquo;home directory&rdquo;, i.e the USERNAME (In my case arthuradriaens) directory where all your files are located such as Downloads and Documents. Now I&rsquo;ll tell you about some basic commands you&rsquo;ll use very often in your coding journey and you can now test out by typing them in the terminal and pressing enter:</p>
 <ul>
 <li>up,down,left and right arrows: move around, e.g up arrow shows you the previous run command and left and right mvoes around the text you typed in the terminal</li>
 <li>ls: See all the files in the current directory</li>
 <li>cd: move to a directory, i.e &ldquo;cd Downloads&rdquo; would move to the directory downloads, to go up a directory type &ldquo;cd ..&rdquo;. Notice that you can only move to Downloads if it&rsquo;s in your current directory, you can, however always go to whatever directory you want if you type the full file path e.g &ldquo;cd /home/USERNAME/Downloads&rdquo;. With the exception being that if you want to go back to the home directory you can just &ldquo;cd&rdquo; (i.e without any arguments).</li>
 </ul>
-<h2 id="homebrew">Homebrew<a hidden class="anchor" aria-hidden="true" href="#homebrew">#</a></h2>
+<h2 id="homebrew">Homebrew</h2>
 <p>To install programs and update them we&rsquo;ll need something called a &ldquo;package manager&rdquo;, this makes our lives way easier. The package manager I use for macbook (and probably is the only one available) is called homebrew and is installed by going to <a href="https://brew.sh/">Their website</a> and following the provided instructions (you&rsquo;re not stupid, I don&rsquo;t have to explain this to you).</p>
-<h3 id="using-homebrew">Using homebrew<a hidden class="anchor" aria-hidden="true" href="#using-homebrew">#</a></h3>
+<h3 id="using-homebrew">Using homebrew</h3>
 <p>After you&rsquo;re done installing try out homebrew by installing python! To do this simply type
 &ldquo;brew install python&rdquo; and look at it doing everything for you! To install packages that you might need in python (e.g numpy, matplotlib,&hellip;) you use pip so for example &ldquo;pip install numpy&rdquo; installs numpy. A good command to memorize is &ldquo;brew upgrade&rdquo;, this upgrades all your packages to their latest version.</p>
-<h2 id="using-the-terminal-to-launch-programs">Using the terminal to launch programs<a hidden class="anchor" aria-hidden="true" href="#using-the-terminal-to-launch-programs">#</a></h2>
+<h2 id="using-the-terminal-to-launch-programs">Using the terminal to launch programs</h2>
 <p>Say you created a file hello.py (e.g using Vim which we&rsquo;ll get to later) in your downloads directory, to execute this file go to your downloads directory in the terminal (using cd as mentioned before) and type &ldquo;python hello.py&rdquo;. To stop a program that freezes in your terminal you can hit the key combination &ldquo;ctrl+c&rdquo;.</p>
-<h2 id="vim">Vim<a hidden class="anchor" aria-hidden="true" href="#vim">#</a></h2>
+<h2 id="vim">Vim</h2>
 <p>It can be quite useful (and fast) to stay in the terminal and not have to open up a text editor to write your programs, a tool I like quite a lot for this is vim. Of course this is optional and you can still use vscode or something similar if you want to but this can also be useful to quickly change a file. You install it the way you would (now) install any program, by writing &ldquo;brew install vim&rdquo; in your terminal and hitting enter. To make for example the file hello.py in our downloads folder we can now move to our Downloads folder and type &ldquo;vim hello.py&rdquo;. You might find this weird at first as you can&rsquo;t really type anything, this is because vim has &ldquo;modes&rdquo; and you&rsquo;re now in &ldquo;command mode&rdquo;, to insert text hit the &ldquo;i&rdquo; key so you enter into &ldquo;insert&rdquo; mode. You can now start typing, as you get better at vim you&rsquo;ll really appreciate this &ldquo;mode&rdquo; style of typing as a lot can be done using the &ldquo;command&rdquo; mode, but for now we&rsquo;ll keep it simple and say that you can just type something like &ldquo;print(&ldquo;hello&rdquo;)&rdquo; and write and quit by hitting the &ldquo;escape&rdquo; key to get back into command mode and typing &ldquo;:wq&rdquo; to Write (w) and Quit (q). To try out vim open op a large text file/program (basically the same thing as extensions like &ldquo;.txt&rdquo; or &ldquo;.py&rdquo; don&rsquo;t really mean anything and are just like the name of the program) with vim and in command mode move around using the &ldquo;h&rdquo;, &ldquo;j&rdquo;, &ldquo;k&rdquo; and &ldquo;l&rdquo; keys. These keys are the standard for moving around the file as you don&rsquo;t have to leave your fingers off the keyboard, you can jump a lot up (or down) by &ldquo;repeating&rdquo; e.g typing &ldquo;10k&rdquo; will make your cursor jump up 10 lines (same for &ldquo;10j&rdquo;) it might take some time to get used to a lot of these commands but some useful ones are:</p>
 <ul>
 <li>yy: copy the full line</li>
@@ -211,85 +58,12 @@ This is the terminal app, open it by just opening spotlight and typing &ldquo;te
 </ul>
 
 
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://arthuradriaens-code.github.io/blogs/tags/computers/">computers</a></li>
-      <li><a href="https://arthuradriaens-code.github.io/blogs/tags/unix/">unix</a></li>
-    </ul>
-  </footer>
 </article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2022 <a href="https://arthuradriaens-code.github.io/blogs/">Blogs</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+</main>
+
+<footer>
+	<a href="https://arthuradriaens-code.github.io/blogs/">https://arthuradriaens-code.github.io/blogs/</a>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
 </body>
-
 </html>
