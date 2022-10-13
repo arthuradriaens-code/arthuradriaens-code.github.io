@@ -1,4 +1,4 @@
-baseURL = 'arthuradriaens-code.github.io/blogs/index.html'
+baseURL = "http://example.org/"
 languageCode = 'en-us'
 title = 'Blogs'
 theme = 'PaperMod'

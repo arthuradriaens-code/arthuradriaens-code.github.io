@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>blogs on Blogs</title>
-    <link>arthuradriaens-code.github.io/blogs/index.html/</link>
+    <link>http://example.org/</link>
     <description>Recent content in blogs on Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2022 22:22:11 +0200</lastBuildDate><atom:link href="arthuradriaens-code.github.io/blogs/index.html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2022 22:22:11 +0200</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming On A Macbook</title>
-      <link>arthuradriaens-code.github.io/blogs/index.html/programmingonmacbook/</link>
+      <link>http://example.org/programmingonmacbook/</link>
       <pubDate>Wed, 12 Oct 2022 22:22:11 +0200</pubDate>
       
-      <guid>arthuradriaens-code.github.io/blogs/index.html/programmingonmacbook/</guid>
+      <guid>http://example.org/programmingonmacbook/</guid>
       <description>How does a unix computer handle packages? This isn&amp;rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have &amp;lsquo;root&amp;rsquo; denoted as &amp;ldquo;/&amp;rdquo; in the filepath as the highest &amp;ldquo;file&amp;rdquo;, next you have a lot of folders: ignore the line &amp;ldquo;&amp;gt;ls&amp;rdquo;, we will later on learn what this is.</description>
     </item>
     
