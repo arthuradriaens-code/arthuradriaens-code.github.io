@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Blogs</title>
-    <link>http://blogs.arthuradriaens.com/categories/</link>
+    <link>arthuradriaens-code.github.io/blogs/index.html/categories/</link>
     <description>Recent content in Categories on Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://blogs.arthuradriaens.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="arthuradriaens-code.github.io/blogs/index.html/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

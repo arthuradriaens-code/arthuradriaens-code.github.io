@@ -1,0 +1,4 @@
+baseURL = 'arthuradriaens-code.github.io/blogs/index.html'
+languageCode = 'en-us'
+title = 'Blogs'
+theme = 'PaperMod'

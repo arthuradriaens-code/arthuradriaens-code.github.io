@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Blogs</title>
-    <link>http://blogs.arthuradriaens.com/tags/</link>
+    <link>arthuradriaens-code.github.io/blogs/index.html/tags/</link>
     <description>Recent content in Tags on Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2022 22:22:11 +0200</lastBuildDate><atom:link href="http://blogs.arthuradriaens.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2022 22:22:11 +0200</lastBuildDate><atom:link href="arthuradriaens-code.github.io/blogs/index.html/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>computers</title>
-      <link>http://blogs.arthuradriaens.com/tags/computers/</link>
+      <link>arthuradriaens-code.github.io/blogs/index.html/tags/computers/</link>
       <pubDate>Wed, 12 Oct 2022 22:22:11 +0200</pubDate>
       
-      <guid>http://blogs.arthuradriaens.com/tags/computers/</guid>
+      <guid>arthuradriaens-code.github.io/blogs/index.html/tags/computers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>unix</title>
-      <link>http://blogs.arthuradriaens.com/tags/unix/</link>
+      <link>arthuradriaens-code.github.io/blogs/index.html/tags/unix/</link>
       <pubDate>Wed, 12 Oct 2022 22:22:11 +0200</pubDate>
       
-      <guid>http://blogs.arthuradriaens.com/tags/unix/</guid>
+      <guid>arthuradriaens-code.github.io/blogs/index.html/tags/unix/</guid>
       <description></description>
     </item>
     
