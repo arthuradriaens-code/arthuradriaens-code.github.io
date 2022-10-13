@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>unix on Blogs</title>
+    <link>http://blogs.arthuradriaens.com/tags/unix/</link>
+    <description>Recent content in unix on Blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Oct 2022 22:22:11 +0200</lastBuildDate><atom:link href="http://blogs.arthuradriaens.com/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming On A Macbook</title>
+      <link>http://blogs.arthuradriaens.com/programmingonmacbook/</link>
+      <pubDate>Wed, 12 Oct 2022 22:22:11 +0200</pubDate>
+      
+      <guid>http://blogs.arthuradriaens.com/programmingonmacbook/</guid>
+      <description>How does a unix computer handle packages? This isn&amp;rsquo;t necessary knowledge to program on your mac, but it does make it easier to memorize what follows. In general, the filesystem of a unix- based PC (e.g a macbook but also all linux platforms) have &amp;lsquo;root&amp;rsquo; denoted as &amp;ldquo;/&amp;rdquo; in the filepath as the highest &amp;ldquo;file&amp;rdquo;, next you have a lot of folders: ignore the line &amp;ldquo;&amp;gt;ls&amp;rdquo;, we will later on learn what this is.</description>
+    </item>
+    
+  </channel>
+</rss>

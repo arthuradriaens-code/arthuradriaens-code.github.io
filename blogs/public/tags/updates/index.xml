@@ -1,0 +1,40 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>Blogs</title>
+	<link>http://blogs.arthuradriaens.com/tags/updates/</link>
+	<description>Recent content in updates on Blogs</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Tue, 11 Oct 2022 22:08:28 +0200</lastBuildDate>
+    
+        <atom:link href="http://blogs.arthuradriaens.com/tags/updates/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Autobiography</title>
+		<link>http://blogs.arthuradriaens.com/autobiography/</link>
+		<pubDate>Tue, 11 Oct 2022 22:13:48 +0200</pubDate>
+		
+		<guid>http://blogs.arthuradriaens.com/autobiography/</guid>
+		<description>&lt;p&gt;This is my autobio&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>About</title>
+		<link>http://blogs.arthuradriaens.com/about/</link>
+		<pubDate>Tue, 11 Oct 2022 22:08:28 +0200</pubDate>
+		
+		<guid>http://blogs.arthuradriaens.com/about/</guid>
+		<description>&lt;p&gt;Here is some content, all in markdown&lt;/p&gt;
+&lt;p&gt;-list item
+-list item&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Dictionary&lt;/dt&gt;
+&lt;dd&gt;Dictionary definitions&lt;/dd&gt;
+&lt;/dl&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>
